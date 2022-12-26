@@ -80,7 +80,6 @@ jobs:
       PROJECT_ID: ${{ secrets.GKE_PROJECT }}
       GKE_CLUSTER: autopilot-cluster-1    # TODO: update to cluster name
       GKE_REGION: us-central1	   # TODO: update to cluster region
-      USE_GKE_GCLOUD_AUTH_PLUGIN: True
 
     steps:
     - name: Check out code
@@ -93,13 +92,9 @@ jobs:
 
     # Alternative option - authentication via credentials json
     - name: Authenticate to Google Cloud
-      uses: 'google-github-actions/auth@v1'
+      uses: 'google-github-actions/auth@v0'
       with:
         credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
-        
-    - name: Install Google Auth Plugin
-      run: |-
-          sudo apt-get update && sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0
