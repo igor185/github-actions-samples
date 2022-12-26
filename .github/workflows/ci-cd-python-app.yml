@@ -80,6 +80,7 @@ jobs:
       PROJECT_ID: ${{ secrets.GKE_PROJECT }}
       GKE_CLUSTER: autopilot-cluster-1    # TODO: update to cluster name
       GKE_REGION: us-central1	   # TODO: update to cluster region
+      USE_GKE_GCLOUD_AUTH_PLUGIN: True
 
     steps:
     - name: Check out code
