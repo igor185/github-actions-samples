@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: hello-gitops
   newName: igor185/hello-gitops
-  newTag: 9dc663094c035b98f7ee4868fdc1b0933876954f
+  newTag: 928ba2ad08c9cb00ae2dba367791800fdf200f39
